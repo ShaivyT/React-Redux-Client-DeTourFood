@@ -109,7 +109,7 @@ class RestaurantService {
             headers: {
 
                 'Accept': 'application/json',
-                'user-key': '8f387705dbb342d6fe530909e541b0dd'//key value here
+                'user-key': 'e7cd14b4e589d23eae93e5d6066f33a1'//key value here
             }
         }).then(function (response) {
             console.log(response);

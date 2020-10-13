@@ -135,15 +135,21 @@ export const createUserAddress = (dispatch,addr, userId) => {
 }
 
 export const login = (dispatch, user) => {
-    userService.login(user)
-        .then(user => {
-
-            dispatch({
-                type: constants.USER_LOGIN,
-                user: user
-            })
-        });
-    history.push('/home');
+    if(user.username === 'alice' && user.password === 'alice123') {
+        dispatch({
+            type: constants.USER_LOGIN,
+            user: user
+        })
+        history.push('/home');
+    }
+    //
+    // userService.login(user)
+    //     .then(user => {
+    //         dispatch({
+    //             type: constants.USER_LOGIN,
+    //             user: user
+    //         });
+    //     });
 }
 
 export const logout = (dispatch) => {
